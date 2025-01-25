@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { RatingCard } from "@/components/RatingCard";
 import { FeatureSection } from "@/components/FeatureSection";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Apple, PlaySquare } from "lucide-react";
 
 const features = [
   {
@@ -42,37 +42,70 @@ const Index = () => {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-7xl text-center"
         >
-          <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
-            Revolutionizing Rental Relationships
-          </span>
-          <h1 className="mt-8 text-4xl font-bold tracking-tight text-neutral-900 sm:text-6xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary"
+          >
+            nestara.net - Revolutionizing Rental Relationships
+          </motion.span>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-8 text-4xl font-bold tracking-tight text-neutral-900 sm:text-6xl"
+          >
             Trust Through Transparency
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-neutral-600 max-w-2xl mx-auto">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="mt-6 text-lg leading-8 text-neutral-600 max-w-2xl mx-auto"
+          >
             Build better rental relationships with our comprehensive rating system for both tenants and property owners.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" className="rounded-full">
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Button size="lg" className="rounded-full group transition-all duration-300 hover:scale-105">
+              Get Started <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full">
-              Learn More
-            </Button>
-          </div>
+            <div className="flex gap-4">
+              <Button variant="outline" size="lg" className="rounded-full hover:scale-105 transition-all duration-300">
+                <Apple className="mr-2 h-5 w-5" />
+                App Store
+              </Button>
+              <Button variant="outline" size="lg" className="rounded-full hover:scale-105 transition-all duration-300">
+                <PlaySquare className="mr-2 h-5 w-5" />
+                Play Store
+              </Button>
+            </div>
+          </motion.div>
         </motion.div>
       </section>
 
       {/* Rating Categories */}
       <section className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
               Comprehensive Rating System
             </h2>
             <p className="mt-4 text-lg text-neutral-600">
               Our detailed rating categories ensure fair and thorough evaluations
             </p>
-          </div>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <RatingCard
               title="Cleanliness"
@@ -115,11 +148,17 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="px-6 py-24 bg-white">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="px-6 py-24 bg-white"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-              Why Choose Our Platform
+              Why Choose Nestara
             </h2>
             <p className="mt-4 text-lg text-neutral-600">
               Discover how our features benefit both tenants and property owners
@@ -127,10 +166,16 @@ const Index = () => {
           </div>
           <FeatureSection features={features} />
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="px-6 py-24 bg-primary">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="px-6 py-24 bg-primary"
+      >
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to Transform Your Rental Experience?
@@ -138,13 +183,29 @@ const Index = () => {
           <p className="mt-6 text-lg leading-8 text-white/90">
             Join thousands of satisfied users who have improved their rental relationships
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
             <Button size="lg" variant="secondary" className="rounded-full bg-white text-primary hover:bg-neutral-100">
               Get Started Now
             </Button>
-          </div>
+            <div className="flex gap-4">
+              <Button size="lg" variant="outline" className="rounded-full bg-white/10 text-white hover:bg-white/20">
+                <Apple className="mr-2 h-5 w-5" />
+                Download for iOS
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full bg-white/10 text-white hover:bg-white/20">
+                <PlaySquare className="mr-2 h-5 w-5" />
+                Download for Android
+              </Button>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
