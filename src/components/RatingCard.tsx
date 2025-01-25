@@ -17,7 +17,7 @@ export const RatingCard = ({ title, score, description, delay }: RatingCardProps
     >
       <div className="absolute -top-3 left-6">
         <span className="px-3 py-1 text-xs font-semibold rounded-full bg-primary text-white">
-          {score}/10
+          {score}/1000
         </span>
       </div>
       <h3 className="mt-3 text-lg font-semibold text-neutral-800">{title}</h3>

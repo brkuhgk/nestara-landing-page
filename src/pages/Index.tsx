@@ -109,37 +109,37 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <RatingCard
               title="Cleanliness"
-              score={9.5}
+              score={950}
               description="Property maintenance and cleanliness standards"
               delay={0.1}
             />
             <RatingCard
               title="Payment History"
-              score={9.8}
+              score={980}
               description="Consistency and timeliness of payments"
               delay={0.2}
             />
             <RatingCard
               title="Communication"
-              score={9.2}
+              score={920}
               description="Responsiveness and clarity in communications"
               delay={0.3}
             />
             <RatingCard
               title="Professionalism"
-              score={9.6}
+              score={960}
               description="Professional conduct and reliability"
               delay={0.4}
             />
             <RatingCard
               title="Maintenance"
-              score={9.4}
+              score={940}
               description="Timely handling of maintenance issues"
               delay={0.5}
             />
             <RatingCard
               title="Overall Rating"
-              score={9.7}
+              score={970}
               description="Comprehensive evaluation score"
               delay={0.6}
             />
